@@ -1,0 +1,31 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          xmlns:layout="sap.ui.layout"
+          controllerName="image.controller.View1">
+    <VBox>
+        <!-- Table to display Sr. No., Value, and Upload -->
+        <Table id="dataTable" inset="false" width="100%" class="sapUiResponsiveContentPadding" mode="MultiSelect">
+            <columns>
+                <Column>
+                    <Text text="Sr. No." />
+                </Column>
+                <Column>
+                    <Text text="Value" />
+                </Column>
+                <Column>
+                    <Text text="Upload" />
+                </Column>
+            </columns>
+            <!-- Table content will be added dynamically -->
+        </Table>
+
+        <!-- Buttons to manage rows -->
+        <HBox justifyContent="SpaceBetween">
+            <Button text="Add Row" press="onAddRowPress" />
+            <Button text="Delete Selected Rows" press="onDeleteSelectedRowsPress" />
+        </HBox>
+    </VBox>
+
+    <!-- Grid to hold the images -->
+    <layout:Grid id="imageGrid" defaultSpan="L3 M3 S3" width="100%" />
+</mvc:View>
